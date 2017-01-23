@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: d0c095fcc73a946dba5ff6e19c555463
+timeCreated: 1485034867
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: baby_alien-base_001
+    100004: left_ankle_knee
+    100006: left_elbow_wrist
+    100008: left_feet_toes
+    100010: left_feet_toes_001
+    100012: left_knee_feet
+    100014: left_shoulder_elbow
+    100016: left_wrist_hand
+    100018: neck_spine
+    100020: right_ankle_knee
+    100022: right_elbow_hand
+    100024: right_feet_toes
+    100026: right_feet_toes_001
+    100028: right_knee_feet
+    100030: right_shoulder_elbow
+    100032: right_wrist_hand
+    100034: skeleton_001
+    100036: spine_2_spine_3
+    100038: spine_spine_1
+    400000: //RootNode
+    400002: baby_alien-base_001
+    400004: left_ankle_knee
+    400006: left_elbow_wrist
+    400008: left_feet_toes
+    400010: left_feet_toes_001
+    400012: left_knee_feet
+    400014: left_shoulder_elbow
+    400016: left_wrist_hand
+    400018: neck_spine
+    400020: right_ankle_knee
+    400022: right_elbow_hand
+    400024: right_feet_toes
+    400026: right_feet_toes_001
+    400028: right_knee_feet
+    400030: right_shoulder_elbow
+    400032: right_wrist_hand
+    400034: skeleton_001
+    400036: spine_2_spine_3
+    400038: spine_spine_1
+    4300000: baby_alien-base_001
+    7400000: Default Take
+    7400002: skeleton_001Action
+    7400004: walk
+    9500000: //RootNode
+    13700000: baby_alien-base_001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 1
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: baby_alien-base_001
+        weight: 1
+      - path: skeleton_001
+        weight: 1
+      - path: skeleton_001/left_ankle_knee
+        weight: 1
+      - path: skeleton_001/left_ankle_knee/left_knee_feet
+        weight: 1
+      - path: skeleton_001/left_ankle_knee/left_knee_feet/left_feet_toes
+        weight: 1
+      - path: skeleton_001/left_ankle_knee/left_knee_feet/left_feet_toes/left_feet_toes_001
+        weight: 1
+      - path: skeleton_001/left_shoulder_elbow
+        weight: 1
+      - path: skeleton_001/left_shoulder_elbow/left_elbow_wrist
+        weight: 1
+      - path: skeleton_001/left_shoulder_elbow/left_elbow_wrist/left_wrist_hand
+        weight: 1
+      - path: skeleton_001/right_ankle_knee
+        weight: 1
+      - path: skeleton_001/right_ankle_knee/right_knee_feet
+        weight: 1
+      - path: skeleton_001/right_ankle_knee/right_knee_feet/right_feet_toes
+        weight: 1
+      - path: skeleton_001/right_ankle_knee/right_knee_feet/right_feet_toes/right_feet_toes_001
+        weight: 1
+      - path: skeleton_001/right_shoulder_elbow
+        weight: 1
+      - path: skeleton_001/right_shoulder_elbow/right_elbow_hand
+        weight: 1
+      - path: skeleton_001/right_shoulder_elbow/right_elbow_hand/right_wrist_hand
+        weight: 1
+      - path: skeleton_001/spine_2_spine_3
+        weight: 1
+      - path: skeleton_001/spine_spine_1
+        weight: 1
+      - path: skeleton_001/spine_spine_1/neck_spine
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: skeleton_001Action
+      takeName: skeleton_001Action
+      firstFrame: 0
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: baby_alien-base_001
+        weight: 1
+      - path: skeleton_001
+        weight: 1
+      - path: skeleton_001/left_ankle_knee
+        weight: 1
+      - path: skeleton_001/left_ankle_knee/left_knee_feet
+        weight: 1
+      - path: skeleton_001/left_ankle_knee/left_knee_feet/left_feet_toes
+        weight: 1
+      - path: skeleton_001/left_ankle_knee/left_knee_feet/left_feet_toes/left_feet_toes_001
+        weight: 1
+      - path: skeleton_001/left_shoulder_elbow
+        weight: 1
+      - path: skeleton_001/left_shoulder_elbow/left_elbow_wrist
+        weight: 1
+      - path: skeleton_001/left_shoulder_elbow/left_elbow_wrist/left_wrist_hand
+        weight: 1
+      - path: skeleton_001/right_ankle_knee
+        weight: 1
+      - path: skeleton_001/right_ankle_knee/right_knee_feet
+        weight: 1
+      - path: skeleton_001/right_ankle_knee/right_knee_feet/right_feet_toes
+        weight: 1
+      - path: skeleton_001/right_ankle_knee/right_knee_feet/right_feet_toes/right_feet_toes_001
+        weight: 1
+      - path: skeleton_001/right_shoulder_elbow
+        weight: 1
+      - path: skeleton_001/right_shoulder_elbow/right_elbow_hand
+        weight: 1
+      - path: skeleton_001/right_shoulder_elbow/right_elbow_hand/right_wrist_hand
+        weight: 1
+      - path: skeleton_001/spine_2_spine_3
+        weight: 1
+      - path: skeleton_001/spine_spine_1
+        weight: 1
+      - path: skeleton_001/spine_spine_1/neck_spine
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: walk
+      takeName: walk
+      firstFrame: 1
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: baby_alien-base_001
+        weight: 1
+      - path: skeleton_001
+        weight: 1
+      - path: skeleton_001/left_ankle_knee
+        weight: 1
+      - path: skeleton_001/left_ankle_knee/left_knee_feet
+        weight: 1
+      - path: skeleton_001/left_ankle_knee/left_knee_feet/left_feet_toes
+        weight: 1
+      - path: skeleton_001/left_ankle_knee/left_knee_feet/left_feet_toes/left_feet_toes_001
+        weight: 1
+      - path: skeleton_001/left_shoulder_elbow
+        weight: 1
+      - path: skeleton_001/left_shoulder_elbow/left_elbow_wrist
+        weight: 1
+      - path: skeleton_001/left_shoulder_elbow/left_elbow_wrist/left_wrist_hand
+        weight: 1
+      - path: skeleton_001/right_ankle_knee
+        weight: 1
+      - path: skeleton_001/right_ankle_knee/right_knee_feet
+        weight: 1
+      - path: skeleton_001/right_ankle_knee/right_knee_feet/right_feet_toes
+        weight: 1
+      - path: skeleton_001/right_ankle_knee/right_knee_feet/right_feet_toes/right_feet_toes_001
+        weight: 1
+      - path: skeleton_001/right_shoulder_elbow
+        weight: 1
+      - path: skeleton_001/right_shoulder_elbow/right_elbow_hand
+        weight: 1
+      - path: skeleton_001/right_shoulder_elbow/right_elbow_hand/right_wrist_hand
+        weight: 1
+      - path: skeleton_001/spine_2_spine_3
+        weight: 1
+      - path: skeleton_001/spine_spine_1
+        weight: 1
+      - path: skeleton_001/spine_spine_1/neck_spine
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
