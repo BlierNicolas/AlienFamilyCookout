@@ -33,7 +33,7 @@ public class PlayerScript : MonoBehaviour {
 			ai.State = "Patrol";
 			ai.m_owner = this;
 			ai.TeamColor = PlayerColor;
-		}ß
+		}
 	}
 
 	public GameObject Baby
