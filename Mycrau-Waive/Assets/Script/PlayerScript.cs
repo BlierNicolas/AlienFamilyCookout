@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
 
-	private Color m_PlayerColor;
+	private Material m_PlayerColor;
 	private GameObject m_Baby;//Le bebe manger
 	public GameObject[] m_Family;
 	//private PowerUps 
@@ -12,7 +12,7 @@ public class PlayerScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		initBaby ();
+		initBaby (3);
 		
 	}
 	
@@ -25,11 +25,10 @@ public class PlayerScript : MonoBehaviour {
 
 	void initBaby(int nbBaby)
 	{
-		Family [0] = Resources.Load ("AIBaby");
 		for (int i = 0; i < nbBaby; i++) 
 		{
+			m_Family [0] = Resources.Load ("AIBaby") as GameObject;
 			AIScript ai = m_Family [i].GetComponent<AIScript> ();
-			m_Family [i] = Resources.Load ("AIBaby");
 			ai.State = "Patrol";
 			ai.m_owner = this;
 			ai.TeamColor = PlayerColor;
