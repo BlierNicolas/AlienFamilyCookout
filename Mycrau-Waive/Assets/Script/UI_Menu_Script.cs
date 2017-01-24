@@ -15,8 +15,6 @@ public class UI_Menu_Script : MonoBehaviour {
 	//Évite de garder en boucle l'affichage des panels
 	public bool waiter = false;
 
-	public Text option0, option1, option2, option3, option4, option5, option6, option7, option8, option9;
-	public GameObject pan0, pan1, pan2, pan3, pan4, pan5, pan6, pan7, pan8, pan9;
 	public Button btnGameMode, btnPowerUps, btnTimer, btnLFS;
 	public Slider sld;
 	public Sprite left_arrow, right_arrow;
@@ -31,7 +29,6 @@ public class UI_Menu_Script : MonoBehaviour {
 		StartCoroutine (DelayedStart ());
 		mode = 0;
 		player = 2;
-		addToLists ();
 		addOption ();
 		gtfo ();
 	}
@@ -83,7 +80,6 @@ public class UI_Menu_Script : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown ("a")) {
-			Debug.Log ("Left");
 			if (option == 1) {
 				changeGameMode ();
 			} else if (option == 2) {
@@ -100,7 +96,6 @@ public class UI_Menu_Script : MonoBehaviour {
 			}
 		}
 		if (Input.GetKeyDown ("d")) {
-			Debug.Log ("Right");
 			if (option == 1) {
 				changeGameMode ();
 			} else if (option == 2) {
@@ -118,8 +113,6 @@ public class UI_Menu_Script : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown ("k")) {
-			Debug.Log ("A");
-			Debug.Log ("Option : " + option);
 			if (option == 9) {
 				initPartie ();
 			} else {
@@ -127,7 +120,6 @@ public class UI_Menu_Script : MonoBehaviour {
 			}
 		}
 		if (Input.GetKeyDown ("l")) {
-			Debug.Log ("B");
 			if (option == 0) {
 				option = 8;
 				optionsBase ();
@@ -137,6 +129,10 @@ public class UI_Menu_Script : MonoBehaviour {
 				subOption ();
 			}
 		}
+	}
+
+	public static int getPlayers() {
+		return player;
 	}
 
 	public void setOptions() {
@@ -149,29 +145,6 @@ public class UI_Menu_Script : MonoBehaviour {
 		player = 2;
 		powup = true;
 		lfs = false;
-	}
-
-	public void addToLists() {
-		menu.Add (pan0);
-		menu.Add (pan1);
-		menu.Add (pan2);
-		menu.Add (pan3);
-		menu.Add (pan4);
-		menu.Add (pan5);
-		menu.Add (pan6);
-		menu.Add (pan7);
-		menu.Add (pan8);
-		menu.Add (pan9);
-		options.Add (option0);
-		options.Add (option1);
-		options.Add (option2);
-		options.Add (option3);
-		options.Add (option4);
-		options.Add (option5);
-		options.Add (option6);
-		options.Add (option7);
-		options.Add (option8);
-		options.Add (option9);
 	}
 
 	public void addOption () {
@@ -256,14 +229,10 @@ public class UI_Menu_Script : MonoBehaviour {
 	}
 
 	public void changeGameMode() {
-		Debug.Log ("T");
-		Debug.Log (mode);
 		if (mode == 1) {
-			Debug.Log ("FFA");
 			mode = 0;
 			btnGameMode.image.sprite = left_arrow;
 		} else if (mode == 0) {
-			Debug.Log ("Coop");
 			mode = 1;
 			btnGameMode.image.sprite = right_arrow;
 		}
@@ -271,11 +240,9 @@ public class UI_Menu_Script : MonoBehaviour {
 
 	public void changePowerUps() {
 		if (!powup) {
-			Debug.Log ("ON");
 			powup = true;
 			btnPowerUps.image.sprite = left_arrow;
 		} else if (powup){
-			Debug.Log ("OFF");
 			powup = false;
 			btnPowerUps.image.sprite = right_arrow;
 		}
@@ -283,11 +250,9 @@ public class UI_Menu_Script : MonoBehaviour {
 
 	public void changeLFS() {
 		if (!lfs) {
-			Debug.Log ("ON");
 			lfs = true;
 			btnLFS.image.sprite = left_arrow;
 		} else if (lfs){
-			Debug.Log ("OFF");
 			lfs = false;
 			btnLFS.image.sprite = right_arrow;
 		}
@@ -295,11 +260,9 @@ public class UI_Menu_Script : MonoBehaviour {
 
 	public void changeTimer() {
 		if (timer == -1) {
-			Debug.Log ("180 sec");
 			timer = 180;
 			btnTimer.image.sprite = left_arrow;
 		} else if (timer == 180){
-			Debug.Log ("None");
 			timer = -1;
 			btnTimer.image.sprite = right_arrow;
 		}
@@ -307,7 +270,6 @@ public class UI_Menu_Script : MonoBehaviour {
 
 	public void changerPlayers() {
 		player = (int)sld.value;
-		Debug.Log (player);
 	}
 
 	public void starter() {
@@ -336,13 +298,13 @@ public class UI_Menu_Script : MonoBehaviour {
 	}
 
 	public void initPartie() {
-		//Cacher ce UI
-		UI_Manager.ToggleUIMenu(false);
-
 		//Rendre l'autre UI_InGame visible
 		UI_Manager.ToggleUIInGame(true);
 
 		//Launch les codes de UI_InGame
-		UI_Manager.player.GetComponent<UI_InGame_Script>().createGame();
+		UI_Manager.player.GetComponent<UI_InGame_Script>().createGame(player);
+
+		//Cacher ce UI
+		UI_Manager.ToggleUIMenu(false);
 	}
 }
