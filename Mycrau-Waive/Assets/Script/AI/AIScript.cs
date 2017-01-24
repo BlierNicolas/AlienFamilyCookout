@@ -10,6 +10,7 @@ public class AIScript : MonoBehaviour {
 
 	//public GameObject Baby;
 	//public GameObject RagDoll;
+	[SerializeField]
 	private string m_State;
 	private Material m_TeamColor;
 
@@ -24,7 +25,9 @@ public class AIScript : MonoBehaviour {
 	public void Init(string _state,Material _material)
 	{
 		State = _state;
-		GetComponent<MeshRenderer> ().material = _material;
+		Material[] mats = new Material[]{_material};
+		GetComponentInChildren<SkinnedMeshRenderer> ().materials = mats;
+		//GetComponent<MeshRenderer> ().material = _material;
 	}
 	
 	// Update is called once per frame
@@ -54,7 +57,7 @@ public class AIScript : MonoBehaviour {
 			StopAllCoroutines();
 			break;
 		 default:
-			//Debug.LogError("Forgot to Init the AI State");
+			Debug.LogError("Forgot to Init the AI State");
 			//Call init function in the instantiate of the AI 
 			break;
 			
@@ -91,7 +94,7 @@ public class AIScript : MonoBehaviour {
 		get{return m_State; }
 		set
 		{
-			//Debug.Log ("SETTERS: " + value);
+			Debug.Log ("SETTERS: " + value);
 			m_State = value; 
 		}
 	}

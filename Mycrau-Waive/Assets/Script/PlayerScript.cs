@@ -25,13 +25,16 @@ public class PlayerScript : MonoBehaviour {
 
 	void initBaby(int nbBaby)
 	{
+		m_Family = new GameObject[nbBaby];
 		for (int i = 0; i < nbBaby; i++) 
 		{
-			m_Family [0] = Resources.Load ("AIBaby") as GameObject;
+			m_Family [i] = Resources.Load ("AIBaby") as GameObject;
 			AIScript ai = m_Family [i].GetComponent<AIScript> ();
-			ai.State = "Patrol";
+			ai.Init ("Patrol", PlayerColor);
 			ai.m_owner = this;
-			ai.TeamColor = PlayerColor;
+			//ai.TeamColor = PlayerColor;
+			Instantiate (m_Family [i], RandPos (), Quaternion.identity);
+			//m_Family [i].transform.position = RandPos ();
 		}
 	}
 
@@ -48,5 +51,10 @@ public class PlayerScript : MonoBehaviour {
 	{
 		get {return m_PlayerColor; }
 		set { m_PlayerColor = value; }
+	}
+
+	Vector3 RandPos()
+	{
+		return new Vector3 (Random.Range (-30, 30), 3f, Random.Range (-30, 30));
 	}
 }
