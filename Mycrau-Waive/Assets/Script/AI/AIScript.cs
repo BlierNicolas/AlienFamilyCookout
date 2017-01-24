@@ -11,6 +11,7 @@ public class AIScript : MonoBehaviour {
 	//public GameObject Baby;
 	//public GameObject RagDoll;
 	private string m_State;
+	private Material m_TeamColor;
 
 	private bool m_IsRagDoll = false;
 	// Use this for initialization
@@ -91,7 +92,13 @@ public class AIScript : MonoBehaviour {
 		set
 		{
 			//Debug.Log ("SETTERS: " + value);
-			m_State = value; }
+			m_State = value; 
+		}
+	}
+	public Material TeamColor
+	{
+		get{return m_TeamColor; }
+		set{m_TeamColor = value; }
 	}
 
 	/*public IEnumerator MoveOverSeconds (Vector3 end, float seconds)

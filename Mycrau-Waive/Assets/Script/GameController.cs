@@ -12,11 +12,14 @@ public class GameController : MonoBehaviour {
 
 	GameController m_Instance;
 
+	PowerUpsController m_PowerUpsController;
+
 
 	// Use this for initialization
 	void Start () 
 	{
 		DontDestroyOnLoad (this);
+		m_PowerUpsController = GetComponent<PowerUpsController> ();
 	}
 
 	public void InitGame(int nbPlayer, int nbRound,string gameMode, bool powerUps, int timer )
@@ -37,7 +40,7 @@ public class GameController : MonoBehaviour {
 	}
 	public void InitPowerUps(bool powerUps)
 	{
-		
+		m_PowerUpsController.enabled = powerUps;
 	}
 	
 	// Update is called once per frame

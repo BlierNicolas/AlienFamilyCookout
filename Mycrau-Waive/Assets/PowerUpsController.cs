@@ -5,6 +5,7 @@ using UnityEngine;
 public class PowerUpsController : MonoBehaviour 
 {
 	GameObject powerUps;
+	const int POWER_UPS_DELAY = 10;
 	// Use this for initialization
 	void Start () 
 	{
@@ -21,7 +22,7 @@ public class PowerUpsController : MonoBehaviour
 
 	IEnumerator DelaySpawn()
 	{
-		yield return new WaitForSeconds (10);
+		yield return new WaitForSeconds (POWER_UPS_DELAY);
 		SpawnRandom ();
 	}
 
@@ -30,7 +31,7 @@ public class PowerUpsController : MonoBehaviour
 		Debug.Log ("Spawn");
 		GameObject clone;
 		clone = Instantiate (powerUps, RandPos (), transform.rotation) as GameObject;
-		Destroy (clone, 10f);
+		Destroy (clone, POWER_UPS_DELAY);
 		StartCoroutine (DelaySpawn ());
 	}
 		

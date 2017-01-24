@@ -6,6 +6,7 @@ public class Kid : System.Object {
 	private int id;
 	private int status;
 
+
 	public Kid(int id, int status) {
 		Id = id;
 		Status = status;

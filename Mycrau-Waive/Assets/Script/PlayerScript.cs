@@ -5,18 +5,14 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
 
 	private Color m_PlayerColor;
-	private GameObject m_Baby;
+	private GameObject m_Baby;//Le bebe manger
 	public GameObject[] m_Family;
 	//private PowerUps 
 
 	// Use this for initialization
 	void Start () 
 	{
-		
-		foreach (GameObject blob in m_Family) 
-		{
-			blob.GetComponent<AIScript>().State = "Patrol";
-		}
+		initBaby ();
 		
 	}
 	
@@ -27,7 +23,18 @@ public class PlayerScript : MonoBehaviour {
 
 	}
 
-
+	void initBaby(int nbBaby)
+	{
+		Family [0] = Resources.Load ("AIBaby");
+		for (int i = 0; i < nbBaby; i++) 
+		{
+			AIScript ai = m_Family [i].GetComponent<AIScript> ();
+			m_Family [i] = Resources.Load ("AIBaby");
+			ai.State = "Patrol";
+			ai.m_owner = this;
+			ai.TeamColor = PlayerColor;
+		}ß
+	}
 
 	public GameObject Baby
 	{
@@ -36,5 +43,11 @@ public class PlayerScript : MonoBehaviour {
 		{
 			//Debug.Log ("Baby Set");
 			m_Baby = value; }
+	}
+
+	public Material PlayerColor
+	{
+		get {return m_PlayerColor; }
+		set { m_PlayerColor = value; }
 	}
 }
